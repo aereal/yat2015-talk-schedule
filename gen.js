@@ -10,8 +10,7 @@ talks.forEach(function (talk) {
     start: startDate,
     end: endDate,
     location: talk.venue,
-    organizer: talk.performer.name + '<...>',
-    summary: talk.title,
+    summary: [ talk.title, talk.performer.name ].join(' - '),
   });
 });
 
